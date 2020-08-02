@@ -1,29 +1,16 @@
 #!/usr/bin/python
 
-def factorial(number):
-    factorial = 1
-    iterator = int(number);
-
-    if (number == 0):
+def accomodation(elemets, by):
+    if (by > 1):
+        return elements * accomodation(elements - 1, by - 1)
+    else:
         return 1
 
-    for i in range(1,  number):
-        factorial *= number
-
-
-    return factorial
-
-
-def accomodation(elemets, by):
-    result =  factorial(elemets) /  factorial(elements - by)
-    print(result);
-
-print("Input nuber of elements");
+print("Input nuber of elements: ");
 elements = int(input())
-print("Input by numbers to  accomodation");
+print("Input by numbers to  accomodation: ");
 by = int(input())
-
-accomodation(elements, by)
+print('Accomodation {} elements by {} items has {} accomodations'.format(elements, by, accomodation(elements, by)))
 
 # vim set ft=python;
     
