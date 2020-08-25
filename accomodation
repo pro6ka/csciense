@@ -1,8 +1,9 @@
 #!/usr/bin/python
 
 def accomodation(list, by, result = 1):
+    print(list);
     result *= list
-    if (by > 0):
+    if (by > 1):
         return accomodation(list - 1, by - 1, result)
     else:
        return result
