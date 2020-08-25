@@ -1,16 +1,16 @@
 #!/usr/bin/python
 
-def accomodation(elemets, by):
-    if (by > 1):
-        return elements * accomodation(elements - 1, by - 1)
+def accomodation(list, by, result = 1):
+    result *= list
+    if (by > 0):
+        return accomodation(list - 1, by - 1, result)
     else:
-        return 1
+       return result
 
-print("Input nuber of elements: ");
-elements = int(input())
-print("Input by numbers to  accomodation: ");
-by = int(input())
-print('Accomodation {} elements by {} items has {} accomodations'.format(elements, by, accomodation(elements, by)))
 
-# vim set ft=python;
-    
+listLenght = int(input("Input list length: "))
+by = int(input("Input elements length: "))
+print('Accomodation {} length  list by {} is: {}'.format(listLenght, by, accomodation(listLenght, by)))
+
+# vim set ft=python
+
